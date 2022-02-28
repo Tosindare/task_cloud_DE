@@ -4,6 +4,9 @@ Main.py has the pipeline for composite (transformation) and sequential runs.
 
 Please comment out/uncomment accordingly.
 
+-unittest.main() >> run unit test on Composite transformation
+
+-main_composite() >> pipeline with Composite transformation
+
 -main() >> sequential pipeline
 
--main_composite() >> pipeline with composite transformation
