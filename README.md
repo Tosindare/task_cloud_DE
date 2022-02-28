@@ -1,6 +1,9 @@
 # Task_cloud_DE
 Script to demonstrate ETL using Apache Beam with Python
-Main.py has the pipeline for composite (transformation) and sequential runs. 
+
+**main.py**.  has the pipeline for composite (transformation) and sequential runs. 
+To run...
+>> python main.py
 
 Please comment out/uncomment accordingly.
 
