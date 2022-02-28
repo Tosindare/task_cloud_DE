@@ -22,25 +22,30 @@ from apache_beam.testing.util import assert_that
 from apache_beam.testing.util import equal_to
 import unittest
 
+
 # function to change date (timestamp) string to date object
 def date_format_object(record):
     record[0] = datetime.strptime(record[0][:-4], '%Y-%m-%d %H:%M:%S').date()
     return record
+
 
 # function to change date object to short date string
 def date_format_string(record):
     record[0] = record[0].strftime('%Y-%m-%d')
     return record
 
+
 # function filter date with year less than 2010
 def filter_date_before_2010(record):
     if int(record[0].strftime('%Y')) >= 2010:
         return record
 
+
 # function to filter transaction_amount greater than 20.00
 def transaction_greaterthan_20(record):
     if float(record[3]) > 20.0:
         return record
+
 
 # function to create dictionary for json file formatting
 class CreateKeyValuePair(beam.DoFn):
@@ -50,6 +55,7 @@ class CreateKeyValuePair(beam.DoFn):
 
 
 file_path = 'gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv'
+
 
 # Composite transformation
 class MyCompositeTransform(beam.PTransform):
@@ -69,7 +75,8 @@ class MyCompositeTransform(beam.PTransform):
 
         return data
 
-#Sequential pipeline
+
+# Sequential pipeline
 
 # def main():
 #     with beam.Pipeline() as pipe:
@@ -100,6 +107,7 @@ def main_composite():
 
         )
 
+
 # Unit testing for Composite transformation
 class MyCompositeTransformTest(unittest.TestCase):
 
@@ -121,9 +129,9 @@ class MyCompositeTransformTest(unittest.TestCase):
             # Assert on the results.
             assert_that(output, equal_to(EXPECTED_OUTPUT), label='CheckOutput data')
 
+
 # uncomment to run unit test
 if __name__ == '__main__':
-    #unittest.main()
+    # unittest.main()
     main_composite()
     # main()
-
