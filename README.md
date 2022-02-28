@@ -2,8 +2,12 @@
 Script to demonstrate ETL using Apache Beam with Python
 
 **main.py**.  has the pipeline for composite (transformation) and sequential runs. 
+
 To run...
->> python main.py
+```
+python main.py
+
+```
 
 Please comment out/uncomment accordingly.
 
