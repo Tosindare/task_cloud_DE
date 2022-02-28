@@ -9,7 +9,7 @@ Created on Sat Feb 26 21:36:11 2022
 #  performs some transformations and produce an output .jsonl file.            #
 #                                                                              #
 #  requirements.txt included, it shows the required library/dependency         #
-#  file - 'unit_test_input.csv' is essential in order to execute the unit test #
+#  file - 'unit_test_input.csv' is essential to execute the unit test #
 #                                                                              #
 ################################################################################
 
