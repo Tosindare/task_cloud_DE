@@ -9,7 +9,7 @@ python main.py
 
 ```
 
-Please comment out/uncomment accordingly.
+Please comment out/uncomment accordingly (in the script).
 
 -unittest.main() >> run unit test on Composite transformation
 
