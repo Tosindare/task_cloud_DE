@@ -4,5 +4,6 @@ Main.py has the pipeline for composite (transformation) and sequential runs.
 
 Please comment out/uncomment accordingly.
 
---main() >> sequential pipeline
---main_composite() >> pipeline with composite transformation
+-main() >> sequential pipeline
+
+-main_composite() >> pipeline with composite transformation
