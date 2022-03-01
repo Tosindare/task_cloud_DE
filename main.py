@@ -87,7 +87,7 @@ class MyCompositeTransform(beam.PTransform):
 #                 | 'Split by commas' >> beam.Map(lambda record: record.split(','))
 #                 | 'date to object' >> beam.Map(date_format_object)
 #                 | 'transactions > 20' >> beam.Filter(transaction_greaterthan_20)
-#                 | 'transaction dates > 2010' >> beam.Filter(filter_date_before_2010)
+#                 | 'transaction dates < 2010' >> beam.Filter(filter_date_before_2010)
 #                 | 'date to string' >> beam.Map(date_format_string)
 #                 | 'Transaction date and amount' >> beam.Map(lambda record: (record[0], float(record[3])))
 #                 | 'Group and sum' >> beam.CombinePerKey(sum)
